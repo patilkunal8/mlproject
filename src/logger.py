@@ -1,4 +1,3 @@
-## track all the error , exception 
 import logging
 import os
 from datetime import datetime
@@ -16,4 +15,3 @@ logging.basicConfig(
 
 
 )
-
