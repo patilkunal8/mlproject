@@ -1,8 +1,6 @@
-# suppose my model is basically created and now I wan to predict for the new data I will basically write over here as
-
-
 import sys
 import os
+
 import pandas as pd
 from src.exception import CustomException
 from src.utils import load_object
@@ -17,7 +15,11 @@ class PredictPipeline:
             model_path=os.path.join("artifacts","model.pkl")
             preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
             print("Before Loading")
+            print(model_path)
+            #print(file_path)
+
             model=load_object(file_path=model_path)
+            print(model)
             preprocessor=load_object(file_path=preprocessor_path)
             print("After Loading")
             data_scaled=preprocessor.transform(features)
